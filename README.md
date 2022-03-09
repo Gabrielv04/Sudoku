@@ -12,22 +12,18 @@ The number of cells removed is determined by the difficulty chosen by the player
 The project contains 3 files:
 -Header file for Player Class.
 -Header file for Board Class.
--The main() function.
+-The Sudoku.cpp file  that contains the main() function.
 
 The Player class contains the player's name,and a bool variable that indicates whether the puzzle is solved or not.
 
 The Board class contains : 
   
-                        -board[9][9]: the board on which the game is played.
-                        -solution[9][9]: the solution of the puzzle. In case the user makes a certain number of mistakes, after another wrong move they will be asked whether they want to 
-reset their mistake count, end the game and see the solution or simply continue playing as normal.
-                        -vector<int> numbers: A vector used to store integers between 1-9. When we attempt to build the board, we shuffle this vector and use it when we build the board using
-backtracking(the shuffle is done so as to get a different board on every time we run the program).
-                        -unordered_set<string> coordinates : We use this unordered_set to remember the coordinates of the cells that are printed at game start. In the event that the user 
-tries to ovewrite one of these cells, they are not allowed to and are prompted to enter a valid move.
-                        -int mistakes. This variable keeps track of the number of wrong moves made by the user.
-                         -HANDLE hCon. Handle for the console, used in order to modify it's attributes(color,text aligment, etc.). Initialized with NULL, used in methods and destroyed using
-the destructor.
+                        board[9][9]: the board on which the game is played.
+                        solution[9][9]: the solution of the puzzle. In case the user makes a certain number of mistakes, after another wrong move they will be asked whether they want to reset their mistake count, end the game and see the solution or simply continue playing as normal.
+                        vector<int> numbers: A vector used to store integers between 1-9. When we attempt to build the board, we shuffle this vector and use it when we build the board using backtracking(the shuffle is done so as to get a different board on every time we run the program).
+                        -unordered_set<string> coordinates : We use this unordered_set to remember the coordinates of the cells that are printed at game start. In the event that the user  tries to ovewrite one of these cells, they are not allowed to and are prompted to enter a valid move.
+                       -int mistakes. This variable keeps track of the number of wrong moves made by the user.
+                       -HANDLE hCon. Handle for the console, used in order to modify it's attributes(color,text aligment, etc.). Initialized with NULL, used in methods and destroyed using the destructor.
 
 3.Algorithm description:
 
